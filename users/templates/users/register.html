@@ -1,0 +1,60 @@
+{% extends "rig/base.html" %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+
+
+
+<div id="register">
+  {% block content %}
+
+<main>
+   <div class="container-fluid g-pb-20  g-py-50">
+      <div class="row justify-content-center">
+         <div class="col-lg-9 g-mb-10">
+            <!-- Listing - Description -->
+            <div class=" g-pb-30">
+               <div class="row">
+                  <div class="col-lg-6 g-mb-10">
+                     <!-- Login -->
+                     <div class="container g-pb-30 ">
+                        <div class="row justify-content-right ">
+                           <div class="col-md-12 col-lg-12 text-center g-mb-70 align-items-right">
+                              <h2 class="h4 mb-4">Register with us</h2>
+                              <!-- Login Form -->
+                              <form method="POST" class="g-mb-30">
+                                 {% csrf_token %}
+                                 <fieldset class="form-group">
+                                   <div class=" g-mb-5 form-control  g-px-15">
+                                       {{ form | crispy }}
+                                    </div>
+                                    
+                                 </fieldset>
+
+                                 <div class="form-group">
+                                    <button class="btn btn-block u-btn-primary g-color-white g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-12 text-uppercase rounded-0 g-px-25 g-py-15" type="submit">Register</button>
+                                 </div>
+                              </form>
+                              <!-- End Login Form -->
+                              <div class="d-flex justify-content-between g-mb-10">
+                                 <a class="d-block g-mb-10" href="{% url 'user_login' %}">Registered ? Sign In</a>
+                                 <a class="d-block g-mb-10" href="ForgotPassword.html">Forgot Password?</a>
+                              </div>
+                              <p class="g-font-size-12">Please view our <a class="g-color-text g-text-underline" href="#">Personal Information Collection Statement</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Login -->
+                  </div>
+                  <!--<div class="col-sm-6 g-mb-10"><img class="img-fluid" src="assets/img-temp/600x450/img5.jpg" alt="Image Description"></div>-->
+               </div>
+            </div>
+            <!-- End Listing - Description -->
+         </div>
+      </div>
+   </div>
+   <hr class="g-brd-gray-light-v4">
+</main>
+  
+
+  {% endblock %}
+</div>

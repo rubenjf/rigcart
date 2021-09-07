@@ -1,0 +1,160 @@
+{% extends "rig/base.html" %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+
+
+
+<div id="register">
+  {% block content %}
+
+      <main>
+      <div class="container-fluid g-pb-20  g-py-50">
+        <div class="row justify-content-center">
+          <div class="col-md-5 col-lg-3 g-mb-70">
+
+          
+            <!-- Popular Properties -->
+ 
+            <!-- End Popular Properties -->
+          </div>
+          
+          
+          <div class="col-lg-9 g-mb-10">
+            <!-- Listing - Description -->
+            <div class=" g-pb-30">
+              <div class="row">
+               <div class="col-sm-61 g-mb-10">
+               
+               		      <!-- Login - Heading -->
+      <div class=" text-center g-pt-10 mx-auto g-mb-40">
+        <h1 class="mb-4">Register</h1>
+        <p class="lead">By registering with us, you will be able to move throgh the checkout process faster, store multiple shipping Addresses, <br>view and track your orders in your account and more.</p>
+      </div>
+      <!-- End Login - Heading -->
+
+      <!-- Login -->
+      <div class="text-center mx-auto g-width-70x--md">
+       <h3 class="mb-4 text-uppercase border-bottom">Account Type</h3>
+      <ul class="d-inline-block list-inline g-bg-secondary g-pa-3 mb-5">
+              <li class="list-inline-item mr-0">
+                <a class="d-block active g-bg-white g-bg-primary--active g-color-main g-color-white--active g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-px-20 g-py-10"
+                 href="{% url 'register' %}"> 
+                  Company Account
+                </a>
+              </li>
+              <li class="list-inline-item mr-0">
+                <a class="d-block g-bg-white g-bg-primary--active g-color-main g-color-white--active g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-px-20 g-py-10"
+                 href="{% url 'individual' %}"> 
+                  Individual Account
+                </a>
+              </li>
+            </ul>
+      
+          <form>
+          
+            <div class="row">
+              <div class="col-md-6 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="text" placeholder="Company name">
+              </div>
+
+              <div class="col-md-6 form-group g-mb-30">
+               <!-- Button Group -->
+                <select class="js-custom-select w-100 u-select-v1 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-bg-white g-py-12" required
+                        data-placeholder="Role"
+                        data-open-icon="fa fa-angle-down"
+                        data-close-icon="fa fa-angle-up">
+                  <option></option>   
+                  <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active"  value="Buyer">Buyer</option>
+                  <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active"  value="Seller">Seller</option>
+                  <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active"  value="Transporter">Transporter</option>
+                  <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active"  value="Evaluator">Evaluator</option>
+                  <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active"  value="TPI">TPI</option>
+                  <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active"  value="Admin">Admin</option>
+                </select>
+                <!-- End Button Group -->
+              </div>
+              <div class="col-md-6 form-group g-mb-30">
+                 <form>
+                   <fieldset class="form-group">
+                      {{form | crispy}}
+                   </fieldset> 
+                  </form>
+              </div>
+
+              <div class="col-md-6 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="text" placeholder="Last name">
+              </div>
+              
+              <div class="col-md-6 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="email" placeholder="Email id">
+              </div>
+
+              <div class="col-md-6 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="tel" placeholder="Your phone">
+              </div>
+
+              <div class="col-md-12 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="text" placeholder="Address-1">
+              </div>
+              
+              <div class="col-md-12 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="text" placeholder="Address-2">
+              </div>
+              
+              <div class="col-md-6 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="text" placeholder="Landmark">
+              </div>
+
+              <div class="col-md-6 form-group g-mb-30">
+                <input class="form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--focus rounded-0 g-py-13 g-px-15" type="text" placeholder="City">
+              </div>
+              
+
+              <div class="col-sm-4 col-lg-3 g-mb-30">
+                <!-- Button Group -->
+                <select id="country" name ="country" class=" w-100 u-select-v1 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-bg-white g-py-12" required
+                        data-placeholder="Country"
+                        data-open-icon="fa fa-angle-down"
+                        data-close-icon="fa fa-angle-up">
+                </select>
+              </div>
+
+               <div class="col-md-6 form-group g-mb-30">
+                <!-- Button Group -->
+                <select  id ="state" name ="state"  class=" w-100 u-select-v1 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-bg-white g-py-12" required
+                        data-placeholder="State"
+                        data-open-icon="fa fa-angle-down"
+                        data-close-icon="fa fa-angle-up">
+                </select>
+                <!-- End Button Group -->
+              </div>
+
+
+
+            </div>
+
+
+            <div class="text-center">
+              <button class="btn u-btn-primary text-uppercase rounded-0 g-px-25 g-py-13" type="submit" role="button">Submit</button>
+            </div>
+            {% csrf_token %}
+          </form>
+        </div>
+      <!-- Login -->
+                    
+               </div>
+               <!--<div class="col-sm-6 g-mb-10"><img class="img-fluid" src="assets/img-temp/600x450/img5.jpg" alt="Image Description"></div>-->
+
+              </div>
+            </div>
+            <!-- End Listing - Description -->
+
+          </div>
+        </div>
+      </div>
+      <hr class="g-brd-gray-light-v4">
+    </main>
+  
+
+  {% endblock %}
+</div>

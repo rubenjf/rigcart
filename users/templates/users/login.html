@@ -1,0 +1,286 @@
+{% extends "rig/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<html lang="en">
+    <body>
+    <!-- Header -->
+    <header id="js-header" class="u-header u-header--sticky-top u-header--toggle-section u-header--change-appearance"
+            data-header-fix-moment="600"
+            data-header-fix-effect="slide">
+      <div class="u-header__section g-transition-0_5"
+           data-header-fix-moment-exclude="g-mt-0"
+           data-header-fix-moment-classes="g-mt-minus-73 g-mt-minus-76--md">
+        <!-- Topbar -->
+        <div class="g-bg-white">
+          <div class="container-fluid g-py-15">
+            <div class="row align-items-center">
+              <div class="col-2 col-md-4 col-lg-2">
+                 <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center g-color-main text-uppercase g-text-underline--none--hover" href="index.html">
+                  <span class="g-color-text g-font-size-35 g-line-height-0_7 g-opacity-0_4 mr-4"></span>
+                  <span class="d-block g-hidden-sm-down g-font-weight-600 g-line-height-1_4">
+                    RIG Cart
+                    <span class="d-block g-color-text g-font-size-10 text-center">Industry Buying</span>
+                  </span>
+                </a>
+                <!-- End Logo -->
+              </div>
+
+              <div class="col-lg-4 g-hidden-md-down">
+                <!-- Social Icons -->
+                <ul class="list-inline d-flex align-items-center ml-3 mb-0">
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v3 u-icon-size--xs g-color-gray-dark-v5 g-color-white--hover g-bg-transparent g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v3 u-icon-size--xs g-color-gray-dark-v5 g-color-white--hover g-bg-transparent g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v3 u-icon-size--xs g-color-gray-dark-v5 g-color-white--hover g-bg-transparent g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-tumblr"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v3 u-icon-size--xs g-color-gray-dark-v5 g-color-white--hover g-bg-transparent g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-pinterest-p"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-2">
+                    <a class="u-icon-v3 u-icon-size--xs g-color-gray-dark-v5 g-color-white--hover g-bg-transparent g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+
+                  <li class="list-inline-item mr-5"></li>
+
+                  <li class="list-inline-item g-mr-3">
+                    <span class="g-color-gray-dark-v5 g-font-size-10">Get for:</span>
+                  </li>
+
+                  <!-- Apps -->
+                  <li class="list-inline-item g-mx-3">
+                    <a class="u-icon-v2 u-icon-size--xs g-brd-gray-light-v2 g-brd-primary-dark-v1--hover g-color-gray-dark-v5 g-color-white--hover g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-android"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-mx-3">
+                    <a class="u-icon-v2 u-icon-size--xs g-brd-gray-light-v2 g-brd-primary-dark-v1--hover g-color-gray-dark-v5 g-color-white--hover g-bg-primary-dark-v1--hover" href="#">
+                      <i class="fa fa-apple"></i>
+                    </a>
+                  </li>
+                  <!-- End Apps -->
+                </ul>
+                <!-- End Social Icons -->
+              </div>
+
+              <div class="col-10 col-md-8 col-lg-6 ml-auto">
+                <!-- List -->
+                <ul class="list-inline float-right mb-0">
+                  <!-- Guide -->
+                  <li class="list-inline-item g-pos-rel g-mx-2">
+                    <a id="guide-dropdown-invoker-2" class="u-link-v5 g-color-gray-dark-v5 g-color-primary--hover g-font-weight-500 g-font-size-12 g-pa-10" href="#"
+                       aria-controls="guide-dropdown-2"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       data-dropdown-event="hover"
+                       data-dropdown-target="#guide-dropdown-2"
+                       data-dropdown-type="css-animation"
+                       data-dropdown-duration="0"
+                       data-dropdown-hide-on-scroll="true"
+                       data-dropdown-animation-in="fadeIn"
+                       data-dropdown-animation-out="fadeOut">
+                      Guide
+                      <i class="ml-2 fa fa-angle-down"></i>
+                    </a>
+                    <ul id="guide-dropdown-2" class="list-unstyled u-shadow-v11 g-min-width-220 g-bg-white g-pos-abs g-left-0 g-z-index-99 g-mt-28"
+                        aria-labelledby="guide-dropdown-invoker-2">
+                      <li class="dropdown-item g-px-5">
+                        <a class="nav-link g-color-text g-font-weight-600" href="#">
+                          First-Time Home Buyers Guide
+                        </a>
+                      </li>
+                      <li class="dropdown-item g-px-5">
+                        <a class="nav-link g-color-text g-font-weight-600" href="#">
+                          Veterans Home Buyers Guide
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- End Guide -->
+
+                  <li class="list-inline-item g-hidden-xs-down g-mx-2">
+                    <span class="g-color-gray-light-v1 g-pos-rel g-top-minus-1">|</span>
+                  </li>
+                  <li class="list-inline-item g-hidden-xs-down g-mx-2">
+                    <a class="u-link-v5 g-color-gray-dark-v5 g-color-primary--hover g-font-weight-500 g-font-size-12 g-pa-10" href="page-contacts-1.html">
+                      <i class="align-middle g-font-size-11 mr-1 icon-communication-033 u-line-icon-pro"></i>
+                      Contacts
+                    </a>
+                  </li>
+                  <li class="list-inline-item g-hidden-xs-down g-mx-2">
+                    <span class="g-color-gray-light-v1 g-pos-rel g-top-minus-1">|</span>
+                  </li>
+                  <li class="list-inline-item g-hidden-xs-down g-mx-2">
+                    <a class="u-link-v5 g-color-gray-dark-v5 g-color-primary--hover g-font-weight-500 g-font-size-12 g-pa-10" href="#">
+                      <i class="align-middle g-font-size-11 mr-1 icon-finance-206 u-line-icon-pro"></i>
+                      Live Chat
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="u-link-v5 g-color-main g-color-white--hover g-bg-secondary g-bg-primary-dark-v1--hover g-font-weight-500 g-px-15 g-py-10" 
+                    href="{% url 'register' %}">Register</a>     
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="u-link-v5 g-color-white g-bg-primary g-bg-primary-dark-v1--hover g-font-weight-500 g-px-15 g-py-10" href="{% url 'index' %}">Login</a>
+                  </li>
+                </ul>
+                <!-- End List -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Topbar -->
+
+        <nav class="js-mega-menu navbar navbar-expand-lg g-brd-y g-brd-2 g-brd-primary-dark-v1 g-bg-primary g-pa-0">
+          <div class="container-fluid">
+            <!-- Responsive Toggle Button -->
+            <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0" type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navBar"
+                    data-toggle="collapse"
+                    data-target="#navBar">
+              <span class="hamburger hamburger--slider g-px-0">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+
+            <div class="col-auto order-lg-1">
+              <!-- Search Form -->
+   
+              <!-- End Search Form -->
+            </div>
+
+            <div class="col-auto order-lg-2 px-0 ml-auto">
+              
+            </div>
+
+            <!-- Navigation -->
+            <div id="navBar" class="collapse navbar-collapse align-items-center order-lg-last g-brd-top g-brd-none--lg g-brd-primary-dark-v1">
+             
+            </div>
+            <!-- End Navigation -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Content -->
+    <main>
+      <div class="container-fluid g-pb-20  g-py-50">
+        <div class="row justify-content-center">
+        
+
+          
+          
+          <div class="col-lg-9 g-mb-10">
+            <!-- Listing - Description -->
+            <div class=" g-pb-30">
+              <div class="row">
+               <div class="col-sm-6 g-mb-10">
+               
+   
+
+
+      <!-- Login -->
+      
+      <div class="container g-pb-30 ">
+        <div class="row justify-content-right ">
+          <div class="col-md-12 col-lg-8 text-center g-mb-70 align-items-right">
+            <h2 class="h4 mb-4">Sign in to your account</h2>
+
+            <!-- Login Form -->
+            <form method="POST" class="g-mb-30">
+            {% csrf_token %}
+
+              <fieldset class="form-group">
+              <div class=" g-mb-20 form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--hover rounded-0 g-py-13 g-px-15">
+                 {{ form | crispy }}
+              </div>
+              </fieldset>
+
+              <div class="form-group">
+                <button class="btn btn-block u-btn-primary g-color-white g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-12 text-uppercase rounded-0 g-px-25 g-py-15" type="submit">Sign In</button>
+              </div>
+              
+            </form>
+            <!-- End Login Form -->
+
+            <div class="d-flex justify-content-between g-mb-10">
+              <a class="d-block g-mb-10" href="{% url 'register' %}">Create an account</a>
+              <a class="d-block g-mb-10" href="ForgotPassword.html">Forgot Password?</a>
+            </div>
+            <p class="g-font-size-12">Please view our <a class="g-color-text g-text-underline" href="#">Personal Information Collection Statement</a></p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Login -->
+                    
+               </div>
+               <!--<div class="col-sm-6 g-mb-10"><img class="img-fluid" src="assets/img-temp/600x450/img5.jpg" alt="Image Description"></div>-->
+
+              </div>
+            </div>
+            <!-- End Listing - Description -->
+
+          </div>
+        </div>
+      </div>
+      <hr class="g-brd-gray-light-v4">
+    </main>
+    <!-- End Content -->
+
+    <!-- Footer -->
+ 
+    <!-- End Footer -->
+
+    <!-- JS Global Compulsory -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+
+    <!-- JS Unify -->
+    <script src="assets/js/hs.core.js"></script>
+    <script src="assets/js/components/hs.header.js"></script>
+    <script src="assets/js/components/hs.hamburgers.js"></script>
+    <script src="assets/js/components/hs.go-to.js"></script>
+
+    <!-- JS Customization -->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+      });
+    </script>
+  </body>
+</html>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends "divinespark/base.html" %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+
+
+
+<div id="div-prayer-requests">
+  {% block content %}
+
+  <!-- ##### Breadcrumb Area Start ##### -->
+  <div class="breadcrumb-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#"><i class="fa fa-home"></i> Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Logout
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ##### Breadcrumb Area End ##### -->
+  <section class="upcoming-events-area section-padding-0-100">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <!-- ##### Contact Form Area Start ##### -->
+          <h4>You have been Logged Out</h4>
+          <div class="border-top pt-3">
+            <small class="text-muted">
+              Do you want to Login Again ?
+              <a  href="{% url 'login' %}">Login Again</a>
+            </small>
+          </div>
+          
+          <!-- ##### Contact Form Area End ##### -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
+</div>
